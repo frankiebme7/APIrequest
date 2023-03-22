@@ -19,6 +19,6 @@ headers = {
 
 dnaAuth = baseurl + authAPI
 
-response = requests.post(dnaAuth, auth=HTTPBasicAuth(USER, PASS), headers=headers, data=payload)
+response = requests.post(dnaAuth, auth=HTTPBasicAuth(USER, PASS), headers=headers, data=payload, verify=False)
 
 print(response.text)
